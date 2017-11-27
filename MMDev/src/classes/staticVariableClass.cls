@@ -45,5 +45,6 @@ public virtual class staticVariableClass {
     public static Integer Counter_Value_Ten {get {return 10;} }
     
       public static Integer Counter_Value_Ten1 {get {return 10;} }
+      public static Integer Counter_Value_Ten2 {get {return 20;} }
     
 }
