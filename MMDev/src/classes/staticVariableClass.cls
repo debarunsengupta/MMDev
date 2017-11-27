@@ -44,8 +44,9 @@ public virtual class staticVariableClass {
     public static Integer Counter_Value_Three {get {return 3;} }
     public static Integer Counter_Value_Ten {get {return 10;} }
     
-      public static Integer Counter_Value_Ten1 {get {return 10;} }
-      public static Integer Counter_Value_Ten2 {get {return 20;} }
-        public static Integer Counter_Value_Ten3 {get {return 30;} }
+    public static Integer Counter_Value_Ten1 {get {return 10;} }
+    public static Integer Counter_Value_Ten2 {get {return 20;} }
+    public static Integer Counter_Value_Ten3 {get {return 30;} }
+    public static Integer Counter_Value_Ten4 {get {return 40;} }
     
 }
