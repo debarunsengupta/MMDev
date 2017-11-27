@@ -1,0 +1,30 @@
+<apex:page controller="ProductPickerController" lightningStylesheets="true">
+<style type="text/css">
+   .outBorder {
+    border:3px outset black;
+   }
+   .inBorder{
+    border-top:2px black;
+    border-left:2px black;
+   }
+</style>
+<apex:form >
+    <p><font size="6"><b>Admin Service Menu</b></font></p>
+    <!-- Display as List -->
+    <apex:pageBlock title="Product Information">
+        <apex:repeat value="{!mapServiceProduct}" var="wrplist">
+            <apex:pageBlockSection title="{!wrplist}" columns="2">
+                <apex:repeat value="{!mapServiceProduct[wrplist]}" var="wrpProd">
+                    <apex:pageblocksectionitem >
+                        <apex:inputCheckbox value="{!wrpProd.selectedValue}" id="checkdone"></apex:inputCheckbox>
+                        <apex:outputLabel value="{!wrpProd.strProductName}"/>
+                    </apex:pageblocksectionitem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:repeat>
+        <div align="center">
+            <apex:commandButton value="Save" action="{!SaveProductRecords}"/>
+        </div> 
+    </apex:pageBlock>
+</apex:form>    
+</apex:page>

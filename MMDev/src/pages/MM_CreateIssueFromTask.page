@@ -1,0 +1,38 @@
+<apex:page standardController="Task" extensions="MMIssueCreation" lightningStylesheets="true">
+
+    <apex:pageMessages ></apex:pageMessages>
+
+    <apex:form >
+        <apex:pageBlock title="Issue Details">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="* Issue Name :"/>
+                    <apex:inputText id="iname" label="Issue Name" value="{!issueName}"  />
+                           
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Task Number :"/>
+                    <apex:outputText value="{!taskName}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Status :"/>
+                    <apex:outputText value="{!status}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Severity Level :"/>    
+                    <apex:selectList size="1" value="{!severityLevel}"> 
+                        <apex:selectOptions value="{!selectedaccnamefields}"/>  
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="* Description :"/>
+                    <apex:inputText label="Description" value="{!description}"  /> 
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSection />
+                <div align="center" draggable="false" >
+                    <apex:commandButton value="Save" action="{!createIssue}"  />   
+                </div>    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>  
+</apex:page>
