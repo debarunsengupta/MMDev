@@ -1,6 +1,6 @@
 public class testclass
 {
-//new method added now
+//new method added
 public static void testing()
 {
 
